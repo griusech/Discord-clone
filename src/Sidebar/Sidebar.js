@@ -1,13 +1,25 @@
 import React from 'react'
 import './Sidebar.css';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AddIcon from '@material-ui/icons/Add';
 
 const Sidebar = () => {
     return (
-        <div>
-            SOY EL SIDEBAR
+        <div className="sidebar">
 
             <div className="sidebar-top">
                 <h3>Guille Developer</h3>
+                <ExpandMoreIcon />
+            </div>
+
+            <div className="sidebar-channels">
+                <div className="sidebar-channelsHeader">
+                    <div className="sidebar-header">
+                        <ExpandMoreIcon />
+                        <h4>Texto de canales</h4>
+                    </div>
+                    <AddIcon className="sidebar-addChannel" />
+                </div>
             </div>
         </div>
     )
