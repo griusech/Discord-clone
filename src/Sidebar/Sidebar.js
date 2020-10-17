@@ -3,6 +3,10 @@ import './Sidebar.css';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarChannel from '../SidebarChannel/SidebarChannel';
+import { Avatar } from '@material-ui/core';
+import MicIcon from '@material-ui/icons/Mic';
+import HeadsetIcon from '@material-ui/icons/Headset';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 const Sidebar = () => {
     return (
@@ -27,6 +31,19 @@ const Sidebar = () => {
                     <SidebarChannel />
                     <SidebarChannel />
                 </div>    
+            </div>
+
+            <div className="sidebar-profile">
+                <Avatar />
+                <div className="sidebar-profileInfo">
+                    <h3>Pitunetix</h3>
+                    <p>#MyId</p>
+                </div>
+                <div className="sidebar-profileIcons">
+                    <MicIcon />
+                    <HeadsetIcon />
+                    <SettingsIcon />
+                </div>
             </div>
         </div>
     )
