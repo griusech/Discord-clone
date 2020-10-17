@@ -1,5 +1,6 @@
 import React from 'react'
 import './Sidebar.css';
+import { useSelector } from 'react-redux'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarChannel from '../SidebarChannel/SidebarChannel';
@@ -7,8 +8,13 @@ import { Avatar } from '@material-ui/core';
 import MicIcon from '@material-ui/icons/Mic';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import SettingsIcon from '@material-ui/icons/Settings';
+import { selectUser } from '../features/userSlice';
+import { auth } from '../firebase';
 
 const Sidebar = () => {
+
+    const user = useSelector(selectUser)
+
     return (
         <div className="sidebar">
 
@@ -34,15 +40,20 @@ const Sidebar = () => {
             </div>
 
             <div className="sidebar-profile">
-                <Avatar src="https://lh3.googleusercontent.com/ogw/ADGmqu943bPhu-iZnqYJOVPipZ-qPYx_AuvIJWxzycZQ=s32-c-mo"/>
+                <Avatar src={user.photo} />
                 <div className="sidebar-profileInfo">
-                    <h3>Pitunetix</h3>
-                    <p>#MyId</p>
+                    <h3>{user.displayName}</h3>
+                    <p>#{user.uid.slice(0, 8)}</p>
                 </div>
                 <div className="sidebar-profileIcons">
                     <MicIcon />
                     <HeadsetIcon />
                     <SettingsIcon />
+                <p 
+                onClick={() => auth.signOut()}
+                className="logout">
+                    Desconectar
+                </p>
                 </div>
             </div>
         </div>

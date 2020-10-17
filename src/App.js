@@ -3,7 +3,7 @@ import Sidebar from './Sidebar/Sidebar'
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css';
 import Chat from './Chat/Chat';
-import Logos from './Logos/Logos';
+// import Logos from './Logos/Logos';
 import { selectUser } from './features/userSlice'
 import Login from './Login/Login';
 import { auth } from './firebase';
@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
-      console.log(authUser)
+      // console.log(authUser)
       if(authUser) {
         // El usuario se logueo
         dispatch(
@@ -29,10 +29,11 @@ function App() {
       }
       else {
         // El usuario no esta logueado
+        dispatch(logout())
       }
     })
     
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="app">
