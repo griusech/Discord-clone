@@ -1,15 +1,18 @@
 import React from 'react';
 import Sidebar from './Sidebar/Sidebar'
 import './App.css';
+import Chat from './Chat/Chat';
+import Logos from './Logos/Logos';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
 
-      {/* SIDEBAR */}
+      {/* <Logos /> */}
+
       <Sidebar /> 
 
-      {/* CHATS */}
+      <Chat />
 
     </div>
   );

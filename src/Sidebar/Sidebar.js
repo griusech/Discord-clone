@@ -34,7 +34,7 @@ const Sidebar = () => {
             </div>
 
             <div className="sidebar-profile">
-                <Avatar />
+                <Avatar src="https://lh3.googleusercontent.com/ogw/ADGmqu943bPhu-iZnqYJOVPipZ-qPYx_AuvIJWxzycZQ=s32-c-mo"/>
                 <div className="sidebar-profileInfo">
                     <h3>Pitunetix</h3>
                     <p>#MyId</p>
