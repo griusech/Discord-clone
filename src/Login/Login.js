@@ -1,12 +1,14 @@
 import React from 'react'
 import './Login.css'
 import { Button } from '@material-ui/core'
+import { auth, provider } from '../firebase'
 
 const Login = () => {
 
     const signIn = () => {
         // Logueo con Google
-        
+        auth.signInWithPopup(provider)
+        .catch(err => alert(err.message))
     }
 
     return (
