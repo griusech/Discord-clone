@@ -8,7 +8,7 @@ const Message = () => {
             <Avatar />
             <div className="message-info">
                 <h4>Pitunetix<span className="message-timestamp">Just Now</span></h4>
-            <p>MENSAJE</p>
+            <p>Mensaje</p>
             </div>
         </div>
     )
