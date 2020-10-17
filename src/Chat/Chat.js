@@ -18,7 +18,9 @@ const Chat = () => {
 
     return (
         <div className="chat">
-            <ChatHeader />
+            <ChatHeader 
+                channelName={channelName}
+            />
 
             <div className="chat-messages">
                 <Message />
