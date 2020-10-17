@@ -5,6 +5,7 @@ import './App.css';
 import Chat from './Chat/Chat';
 import Logos from './Logos/Logos';
 import { selectUser } from './features/userSlice'
+import Login from './Login/Login';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
           <Chat />
         </>
       ) : (
-        <h1>ACA DEBO COLOCARL EL LOGIN</h1>
+        <Login />
       )}
 
 
