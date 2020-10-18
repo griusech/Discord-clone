@@ -3,7 +3,7 @@ import Sidebar from './Sidebar/Sidebar'
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css';
 import Chat from './Chat/Chat';
-// import Logos from './Logos/Logos';
+import Logos from './Logos/Logos';
 import { selectUser } from './features/userSlice'
 import Login from './Login/Login';
 import { auth } from './firebase';
@@ -14,6 +14,7 @@ function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser)
 
+  //Auth el Usuario
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
       // console.log(authUser)
@@ -40,8 +41,8 @@ function App() {
 
       {user ? (
         <>
-          {/* <Logos /> */}
-    
+          <Logos />
+   
           <Sidebar /> 
     
           <Chat />

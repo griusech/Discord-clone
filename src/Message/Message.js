@@ -7,7 +7,11 @@ const Message = ({message, user, timestamp}) => {
         <div className="message">
             <Avatar src={user.photo}/>
             <div className="message-info">
-                <h4>{user.displayName}<span className="message-timestamp">{new Date(timestamp?.toDate()).toUTCString()}</span></h4>
+                <h4>{user.displayName.split(' ')[0]}
+                    <span className="message-timestamp">
+                        {new Date(timestamp?.toDate()).toUTCString()}
+                    </span>
+                </h4>
             <p>{message}</p>
             </div>
         </div>

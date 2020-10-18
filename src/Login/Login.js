@@ -5,8 +5,8 @@ import { auth, provider } from '../firebase'
 
 const Login = () => {
 
+    // Logueo con Google
     const signIn = () => {
-        // Logueo con Google
         auth.signInWithPopup(provider)
         .catch(err => alert(err.message))
     }

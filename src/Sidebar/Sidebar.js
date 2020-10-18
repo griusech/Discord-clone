@@ -26,6 +26,8 @@ const Sidebar = () => {
         ))
     }, [])
 
+
+    //AGREGO UN NUEVO CANAL
     const addChannel = () => {
         const channelName = prompt('Ingresar nombre del canal')
 
@@ -48,7 +50,7 @@ const Sidebar = () => {
                 <div className="sidebar-channelsHeader">
                     <div className="sidebar-header">
                         <ExpandMoreIcon />
-                        <h4>Texto de canales</h4>
+                        <h4>Agregar Canal</h4>
                     </div>
                     <AddIcon 
                     onClick={addChannel}
@@ -71,7 +73,7 @@ const Sidebar = () => {
             <div className="sidebar-profile">
                 <Avatar src={user.photo} />
                 <div className="sidebar-profileInfo">
-                    <h3>{user.displayName}</h3>
+                    <h3>{user.displayName.split(' ')[0]}</h3>
                     <p>#{user.uid.slice(0, 8)}</p>
                 </div>
                 <div className="sidebar-profileIcons">

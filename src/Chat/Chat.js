@@ -37,8 +37,8 @@ const Chat = () => {
     const sendMessage = (e) => {
         e.preventDefault();
 
-       
-            db.collection('channels')
+            db
+            .collection('channels')
             .doc(channelId)
             .collection('msg')
             .add({

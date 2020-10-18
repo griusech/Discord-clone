@@ -34,8 +34,10 @@
 
 .sidebar-profileInfo > h3 {
     color: white;
+    font-size: 15px;
 }
 
 .sidebar-profileIcons > .MuiSvgIcon-root {
-    padding: 10px;
+    /* padding: 10px; */
+    font-size: 23px;
 }
