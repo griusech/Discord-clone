@@ -37,15 +37,19 @@ const Chat = () => {
     const sendMessage = (e) => {
         e.preventDefault();
 
-            db
-            .collection('channels')
-            .doc(channelId)
-            .collection('msg')
-            .add({
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                message: input,
-                user: user,
-            })
+        if(input === ''){
+            return null
+        }
+
+        db
+        .collection('channels')
+        .doc(channelId)
+        .collection('msg')
+        .add({
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            message: input,
+            user: user,
+        })
 
         setInput('')
         

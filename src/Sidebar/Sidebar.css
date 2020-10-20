@@ -42,6 +42,25 @@
     align-items: center;
 }
 
+.sidebar-form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.sidebar-form > button {
+    color: white;
+    margin-top: 15px;
+    background-color: #738adb;
+}
+
+.sidebar-form > button:hover {
+    color: white;
+    background-color: #505d88;
+    transition: 300ms ease;
+}
+
 .logout {
     display: flex;
     align-items: center;
